@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Color Flipper || Simple</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <nav class="nav-center">
+        <h4>Color Flipper</h4>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">Simple</a>
+            </li>
+            <li>
+                <a href="hex.html">Hex</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <main class="container">
+        <h2>backgroud color : <span class="color">#f1f5f8</span></h2>
+        <button class="btn btn-hero" id="btn">Trocar cor</button>
+        <button class="auto">Auto</button>
+        <label for="delay">Delay</label>
+        <input type="range" name="delay" id="delay" value="2" min="1" max="10">
+    </main>
+
+    <script src="hex.js"></script>
 </body>
+
 </html>
