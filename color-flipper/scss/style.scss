@@ -1,0 +1,54 @@
+@function ftcolor($bgcolor){
+    @if(lightness($bgcolor) > 50){
+        @return #000;
+    } @else {
+        @return #ffffff;
+    }
+}
+
+
+@mixin bgcolor($color){
+    background-color: $color;
+    color: ftcolor($color);
+}
+
+.my-box{
+    @include bgcolor(#f2f2f2);
+}
+
+body {
+    height: 100vh;
+
+    .container {
+        text-align: center;
+        margin: auto;
+        width: fit-content;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            background-color: black;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #000000;
+            color: ftcolor($color);
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+    
+    .container .color {
+        color: cornflowerblue;
+    }
+    
+    
+}
