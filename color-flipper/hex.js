@@ -4,11 +4,9 @@ const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
 const automatico = document.querySelector(".auto");
 const delay = document.getElementById("delay");
+const contraste = document.querySelectorAll('.contrast');
 
-// let tempoDeDelay = delay.value * 1000;
 btn.addEventListener("click", () => trocaCor());
-// console.log(tempoDeDelay);
-console.log(delay);
 
 function trocaCor() {
   let hexColor = "#";
@@ -17,8 +15,19 @@ function trocaCor() {
   }
   color.textContent = hexColor;
   document.body.style.backgroundColor = hexColor;
-  console.log("ta entrando aqui pra trocar de cor");
   console.log(delay.value);
+  if(chroma(hexColor).luminance() > 0.5){
+    contraste.forEach(element => {
+      element.style.backgroundColor = "black";
+      element.style.color = "white";
+    })
+  }
+  else {
+    contraste.forEach(element => {
+      element.style.backgroundColor = "white";
+      element.style.color = "black";
+    })
+  }
 }
 
 function getRandomNumber() {
@@ -40,8 +49,5 @@ delay.addEventListener("change", () => {
   if (ligado) {
     clearInterval(ponteiro);
     ponteiro = setInterval(trocaCor, delay.value * 1000);
-    console.log(`opa tamo ai mudando o delay pra: ${delay.value}`);
-  } else {
-    console.log("blau");
   }
 });

@@ -6,29 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Flipper || Simple</title>
-
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js" integrity="sha512-zInFF17qBFVvvvFpIfeBzo7Tj7+rQxLeTJDmbxjBz5/zIr89YVbTNelNhdTT+/DCrxoVzBeUPVFJsczKbB7sew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <nav class="nav-center">
-        <h4>Color Flipper</h4>
-        <ul class="nav-links">
-            <li>
-                <a href="index.html">Simple</a>
-            </li>
-            <li>
-                <a href="hex.html">Hex</a>
-            </li>
-        </ul>
+        <a href="#" class="contrast">Color Flipper</a>
     </nav>
 
 
     <main class="container">
-        <h2>backgroud color : <span class="color">#f1f5f8</span></h2>
-        <button class="btn btn-hero" id="btn">Trocar cor</button>
-        <button class="auto">Auto on</button>
+        <h2 class="contrast">backgroud color : <span class="color">#f1f5f8</span></h2>
+        <button class="btn btn-hero contrast" id="btn">Trocar cor</button>
+        <button class="auto contrast">Auto on</button>
         <label for="delay">Delay</label>
         <input type="range" name="delay" id="delay" value="2" min="1" max="10">
     </main>

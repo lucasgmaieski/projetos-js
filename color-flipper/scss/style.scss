@@ -1,3 +1,6 @@
+@use 'variables';
+
+
 @function ftcolor($bgcolor){
     @if(lightness($bgcolor) > 50){
         @return #000;
@@ -6,18 +9,25 @@
     }
 }
 
-
 @mixin bgcolor($color){
     background-color: $color;
     color: ftcolor($color);
 }
 
-.my-box{
-    @include bgcolor(#f2f2f2);
-}
-
 body {
     height: 100vh;
+    text-align: center;
+    a {
+        border-radius: 05px;
+        border: 1px solid black;
+        display: inline-block;
+        padding: 3px;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 
     .container {
         text-align: center;
@@ -37,18 +47,22 @@ body {
         }
 
         button {
-            background-color: #000000;
-            color: ftcolor($color);
+            background-color: variables.$color;
+            color: ftcolor(variables.$color);
             margin-top: 20px;
             padding: 15px;
             border-radius: 10px;
             cursor: pointer;
+            display: inline-block;
         }
+        
+        .color {
+            color: cornflowerblue;
+            
+        }
+        
     }
     
-    .container .color {
-        color: cornflowerblue;
-    }
     
     
 }
