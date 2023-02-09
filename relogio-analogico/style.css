@@ -54,12 +54,15 @@ h1 {
     padding-left: 50%;
     padding-top: 50%;
     margin-top: -100%;
+    position: relative;
 }
 .p {
     transform-origin: left;
     transform: rotate(0deg);
     border-radius: 50%;
     position: absolute;
+    top: 149px;
+    left: 149px;
 }
 
 .p_s {
