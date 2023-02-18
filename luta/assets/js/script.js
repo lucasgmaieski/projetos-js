@@ -1,5 +1,14 @@
-let char = new Knight('Lucas');
+let log = new Log(document.querySelector('.log'));
 
-console.log(char.name);
-console.log(char.life);
-console.log(char.attack);
+let char = new Knight('Lucas');
+let monster = new LittleMonster();
+
+const stage = new Stage(
+    char, 
+    monster,
+    document.querySelector('#char'),
+    document.querySelector('#monster'),
+    log
+);
+
+stage.start();
